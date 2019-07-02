@@ -10,8 +10,32 @@
 <body>
 
 	<div id="contenedor" class="container">
-
+		
 	</div>
+
+
+	<script id="template_paisesAll" type="text/x-handlebars-template">
+		<table class="table table-striped table-hover table-bordered">
+			<thead class="thead-dark">
+			<tr>
+				<th>Nombre</th>
+				<th>Capital</th>
+				<th>Region</th>
+				<th>Traducción Español</th>
+			</tr>
+			</thead>
+			<tbody>
+				{{#each paises}}
+					<tr>
+						<td>{{this.name}}</td>
+						<td>{{this.capital}}</td>
+						<td>{{this.region}}</td>
+						<td>{{this.translations.es}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</script>
 
 	<script id="template_persona" type="text/x-handlebars-template">
 		{{#each persona}}
