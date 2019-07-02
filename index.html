@@ -14,13 +14,15 @@
 	</div>
 
 	<script id="template_persona" type="text/x-handlebars-template">
-		<div>
-			<h1>{{apellido}}</h1>
+		{{#each persona}}
+		<div class="entry">
+			<h1>{{this.apellido}}</h1>
 			<div class="body">
-				{{nombre}}
-				{{correo}}
+				{{this.nombre}}
+				{{this.correo}}
 			</div>
 		</div>
+		{{/each}}
 	</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
