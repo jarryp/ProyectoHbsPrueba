@@ -16,7 +16,7 @@
 	<script id="template_persona" type="text/x-handlebars-template">
 		{{#each persona}}
 		<div class="entry">
-			<h1>{{this.apellido}}</h1>
+			<h1> {{enumeracion @index '+' 1}} {{this.apellido}}</h1>
 			<div class="body">
 				{{this.nombre}}
 				{{this.correo}}
